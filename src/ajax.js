@@ -225,6 +225,7 @@
 
     if (settings.headers) for (name in settings.headers) setHeader(name, settings.headers[name])
     xhr.setRequestHeader = setHeader
+    xhr.withCredentials = settings.withCredentials
 
     xhr.onreadystatechange = function(){
       if (xhr.readyState == 4) {
